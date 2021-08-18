@@ -1,0 +1,9 @@
+.govuk-width-container.hide-crown > .govuk-header__logo {
+  display: none;
+}
+
+.govuk-width-container.hide-crown > .govuk-header__content {
+  padding-left: 0;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3VzdG9tLmNzcyIsInNvdXJjZXMiOlsiY3VzdG9tLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLmdvdnVrLXdpZHRoLWNvbnRhaW5lci5oaWRlLWNyb3duID4gLmdvdnVrLWhlYWRlcl9fbG9nbyB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbi5nb3Z1ay13aWR0aC1jb250YWluZXIuaGlkZS1jcm93biA+IC5nb3Z1ay1oZWFkZXJfX2NvbnRlbnQge1xuICBwYWRkaW5nLWxlZnQ6IDA7XG59XG4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsQUFBQSxzQkFBc0IsQUFBQSxXQUFXLEdBQUcsbUJBQW1CLENBQUM7RUFDdEQsT0FBTyxFQUFFLElBQUk7Q0FDZDs7QUFFRCxBQUFBLHNCQUFzQixBQUFBLFdBQVcsR0FBRyxzQkFBc0IsQ0FBQztFQUN6RCxZQUFZLEVBQUUsQ0FBQztDQUNoQiJ9 */
