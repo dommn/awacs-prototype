@@ -9,26 +9,10 @@
 <dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Name of account holder
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{person_firstName}}
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
       National Insurance number
     </dt>
     <dd class="govuk-summary-list__value">
       {{person_theirNino}}
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Date received
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{details_dateReceived}}
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -43,98 +27,74 @@
 
 <h2 class="govuk-heading-m">Current bank account details</h2>
 
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Sort code"
-      },
-      value: {
-        text: "112233"
-      },
-      actions: {
-        items: [
-          {
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Account number"
-      },
-      value: {
-        text: "12345678"
-      },
-      actions: {
-        items: [
-          {
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Roll number"
-      },
-      value: {
-        text: "192834628281"
-      },
-      actions: {
-        items: [
-          {
-          }
-        ]
-      }
-    }
-  ]
-}) }}
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name of account holder
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{person_firstName}}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Sort code
+    </dt>
+    <dd class="govuk-summary-list__value">
+      112233
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Account number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      12345678
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Roll number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      192834628281
+    </dd>
+  </div>
+</dl>
 
 <h2 class="govuk-heading-m">New bank account details</h2>
 
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Sort code"
-      },
-      value: {
-        text: "224356"
-      },
-      actions: {
-        items: [
-          {
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Account number"
-      },
-      value: {
-        text: "87465223"
-      },
-      actions: {
-        items: [
-          {
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Roll number"
-      },
-      value: {
-        text: "A12345678"
-      },
-      actions: {
-        items: [
-          {
-          }
-        ]
-      }
-    }
-  ]
-}) }}
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name of account holder
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{person_firstName}}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Sort code
+    </dt>
+    <dd class="govuk-summary-list__value">
+      224356
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Account number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      87465223
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Roll number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      A12345678
+    </dd>
+  </div>
+</dl>

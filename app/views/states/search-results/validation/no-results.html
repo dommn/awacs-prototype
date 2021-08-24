@@ -15,17 +15,6 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-
-  {{ govukErrorSummary({
-  titleText: "There is a problem",
-  errorList: [
-    {
-      text: "Enter a National Insurance number that is 2 letters, 6 numbers, then A, B, C or D, like QQ123456C",
-      href: "#search"
-    }
-  ]
-}) }}
-
 <div class="govuk-grid-column-one-half">
 <h1 class="govuk-heading-l">Search tasks</h1>
 
@@ -33,16 +22,12 @@
 
 <form action="#" method="post">
 
-<div class="govuk-form-group govuk-form-group--error">
+<div class="govuk-form-group">
   <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search"">
     National Insurance number
   </label>
 
-  <span id="event-name-error" class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span> Enter a National Insurance number that is 2 letters, 6 numbers, then A, B, C or D, like QQ123456C
-  </span>
-
-  <input class="govuk-input moj-search__input govuk-input--error" id="search" name="search" type="search" aria-describedby="search-hint" value="{{ data['search'] }}">
+  <input class="govuk-input moj-search__input" id="search" name="search" type="search" aria-describedby="search-hint" value="{{ data['search'] }}">
 </div>
 
 <button class="govuk-button moj-search__button " data-module="govuk-button">
