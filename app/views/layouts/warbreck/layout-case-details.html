@@ -28,11 +28,12 @@
 
 {% endblock %}
 
-{% block backButton %}
-
-{% endblock %}
-
 {% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
 
