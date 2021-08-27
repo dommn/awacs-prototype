@@ -1,4 +1,17 @@
-{% extends "layouts/warbreck/layout-search.html" %}
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Advice of wrong account for credit
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "/",
+  serviceName: "Manage redirected payments",
+  serviceUrl: "/",
+  containerClasses: "govuk-width-container hide-crown"
+}) }}
+{% endblock %}
 
 {% block beforeContent %}
 
@@ -18,8 +31,8 @@
 {% include "components/response-radios/radios.html" %}
 
 {{ govukButton({
- text: "Submit",
- href: "home-success"
+  text: "Submit",
+  href: "home-success"
 }) }}
 
 
