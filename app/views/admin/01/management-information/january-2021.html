@@ -9,9 +9,11 @@
 
 {% block content %}
 
+<form action="search-month" method="post" novalidate>
+
   <h1 class="govuk-heading-l">Management information</h1>
 
-{% include "components/admin/date-input/date-input.html" %}
+  {% include "components/admin/date-input/date-input.html" %}
 
 <table class="govuk-table">
   <caption class="govuk-table__caption govuk-table__caption--m">Showing results for January 2021</caption>
@@ -57,5 +59,6 @@
   text: "Export this data"
 }) }}
 
+</form>
 
 {% endblock %}

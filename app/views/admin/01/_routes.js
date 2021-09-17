@@ -3,49 +3,47 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-router.post('/search', function (req, res) {
+router.post('/management-information/search-month', function (req, res) {
 
-  let searchNino = req.session.data['search']
+  let searchMonth = req.session.data['search-date-month']
 
-  if (searchNino === 'AA112233B') {
-    res.redirect('search-results')
+  if (searchMonth === '01') {
+    res.redirect('january-2021')
   }
-  else if (searchNino === 'AA 11 22 33 B') {
-    res.redirect('search-results')
+
+  else if (searchMonth === '02') {
+    res.redirect('february-2021')
   }
+
+  else if (searchMonth === '03') {
+    res.redirect('march-2021')
+  }
+
+  else if (searchMonth === '04') {
+    res.redirect('april-2021')
+  }
+
+  else if (searchMonth === '05') {
+    res.redirect('may-2021')
+  }
+
+  else if (searchMonth === '06') {
+    res.redirect('june-2021')
+  }
+
+  else if (searchMonth === '07') {
+    res.redirect('july-2021')
+  }
+
+  else if (searchMonth === '08') {
+    res.redirect('august-2021')
+  }
+
+
+  else if (searchMonth === '09') {
+    res.redirect('september-2021')
+  }
+
 })
-
-
-router.post('/anita-nalini/completed-no', function (req, res) {
-
-    // Make a variable and give it the value from 'juggling-balls'
-    var taskCompleted = req.session.data['task-completed']
-
-    // Check whether the variable matches a condition
-    if (taskCompleted == "no"){
-      // Send user to next page
-      res.redirect('response')
-    } else {
-      // Send user to ineligible page
-      res.redirect('home-success')
-    }
-
-  })
-
-  router.post('/jane-doe/completed-no', function (req, res) {
-
-      // Make a variable and give it the value from 'juggling-balls'
-      var taskCompleted = req.session.data['task-completed']
-
-      // Check whether the variable matches a condition
-      if (taskCompleted == "no"){
-        // Send user to next page
-        res.redirect('response')
-      } else {
-        // Send user to ineligible page
-        res.redirect('home-success')
-      }
-
-    })
 
 module.exports = router
