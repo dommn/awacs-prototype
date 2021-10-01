@@ -1,0 +1,27 @@
+{% extends "layouts/admin/user-details.html" %}
+
+{% set details_benefitType = "Attendance Allowance" %}
+
+{% block content %}
+
+   <div class="govuk-grid-row">
+
+     <form action="search-month" method="post" novalidate>
+
+   <div class="govuk-grid-column-full">
+
+     <h1 class="govuk-heading-xl">{{details_benefitType}} tasks</h1>
+
+
+     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+     {% include "components/admin/task-search/search-results.html" %}
+
+
+
+  </div>
+  </form>
+
+  </div>
+
+{% endblock %}

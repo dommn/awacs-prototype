@@ -1,0 +1,40 @@
+{% extends "layouts/admin/user-details.html" %}
+
+{% set person_theirName = "Bobbi Bell" %}
+{% set person_theirNino = "AA 11 22 33 B" %}
+{% set details_benefitType = "Employment and Support Allowance" %}
+{% set details_dateReceived = "07/08/2021" %}
+{% set details_taskResponse = "Unable to update" %}
+
+{% block content %}
+
+   <div class="govuk-grid-row">
+
+     <form action="search-month" method="post" novalidate>
+
+   <div class="govuk-grid-column-full">
+
+     <h1 class="govuk-heading-xl">Edit user</h1>
+
+     <div class="govuk-form-group">
+      <label class="govuk-label" for="event-name">
+        Full name
+      </label>
+      <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text" value="Bobbi Bell">
+    </div>
+
+    <div class="govuk-button-group">
+  {{ govukButton({
+    text: "Save changes"
+  }) }}
+
+  <a class="govuk-link" href="bobbi-bell">Cancel</a>
+</div>
+
+
+  </div>
+  </form>
+
+  </div>
+
+{% endblock %}

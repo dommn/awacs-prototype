@@ -1,0 +1,235 @@
+{% extends "layouts/admin/layout-admin.html" %}
+
+{% set notification_outstandingTasks = "36" %}
+{% set notification_pausedTasks = "4" %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Management information</h1>
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-one-third">
+
+<div class="moj-filter-layout">
+
+  <div class="moj-filter-layout__filter">
+
+    <div class="moj-filter">
+
+      <div class="moj-filter__header">
+
+        <div class="moj-filter__header-title">
+          <h2 class="govuk-heading-m">Filter</h2>
+        </div>
+
+        <div class="moj-filter__header-action">
+
+        </div>
+
+      </div>
+
+      <div class="moj-filter__content">
+
+        <div class="moj-filter__options">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Apply filters
+          </button>
+
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend--m">
+              From date
+            </legend>
+            <div class="govuk-date-input" id="-search-date">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="search-date-month">
+                    Month
+                  </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="search-date-month" name="search-date-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="search-date-year">
+                    Year
+                  </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="search-date-year" name="year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <legend class="govuk-fieldset__legend--m">
+              To date
+            </legend>
+            <div class="govuk-date-input" id="-search-date">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="search-date-month">
+                    Month
+                  </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="search-date-month" name="search-date-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="search-date-year">
+                    Year
+                  </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="search-date-year" name="year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              </div>
+            </div>
+          </div>
+
+          {{ govukRadios({
+  classes: "govuk-radios--small",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "User",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Bobbi Brown",
+      text: "Bobbi Brown"
+    },
+    {
+      value: "Jakob Cooper",
+      text: "Jakob Cooper"
+    },
+    {
+      value: "Lili Stephenson",
+      text: "Lili Stephenson"
+    },
+    {
+      value: "Shaqib Mahmood",
+      text: "Shaqib Mahmood"
+    },
+    {
+      value: "Susanna Hyde",
+      text: "Susanna Hyde"
+    },
+    {
+      value: "Sylvia Bernard",
+      text: "Sylvia Bernard"
+    }
+  ]
+}) }}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Showing results for August 2021</caption>
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Benefit type</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Tasks received</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Tasks closed in 3 days</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Tasks not closed in 3 days</th>
+    </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Attendance Allowance</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">25</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">23</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Bereavement Benefit</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">170</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">167</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Bereavement Support Payments</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">29</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">29</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Carer's Allowance</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">191</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">191</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Disability Living Allowance</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">124</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">124</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Employment and Support Allowance</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">328</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">323</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Income Support</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">195</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">195</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Industrial Injuries Disablement Benefit</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">25</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">25</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Jobseeker's Allowance</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">170</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">170</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Maternity Allowance</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">State Pension</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">192</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">192</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Support for Mortgage Interest</a></th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">32</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">32</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><b>1606</b></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><b>1596</b></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><b>8</b></td>
+    </tr>
+    </tbody>
+    </table>
+
+    </div>
+
+
+{% endblock %}

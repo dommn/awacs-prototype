@@ -1,0 +1,32 @@
+{% extends "layouts/admin/user-details.html" %}
+
+{% set person_theirName = "Bobbi Bell" %}
+{% set person_theirNino = "AA 11 22 33 B" %}
+{% set details_benefitType = "Attendance Allowance" %}
+{% set details_dateReceived = "07/08/2021" %}
+{% set details_taskResponse = "Unable to update" %}
+
+{% block content %}
+
+   <div class="govuk-grid-row">
+
+     <form action="search-month" method="post" novalidate>
+
+   <div class="govuk-grid-column-full">
+
+     <span class="govuk-caption-xl">{{person_theirName}}</span>
+     <h1 class="govuk-heading-xl">{{details_benefitType}} tasks</h1>
+
+
+     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+     {% include "components/admin/task-search/search-results-user.html" %}
+
+
+
+  </div>
+  </form>
+
+  </div>
+
+{% endblock %}

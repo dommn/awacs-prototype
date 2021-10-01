@@ -1,0 +1,54 @@
+{% extends "layouts/admin/user-details.html" %}
+
+{% set person_theirName = "Jakob Cooper" %}
+{% set person_theirNino = "AA 11 22 33 B" %}
+{% set details_benefitType = "Employment and Support Allowance" %}
+{% set details_dateReceived = "07/08/2021" %}
+{% set details_taskResponse = "Unable to update" %}
+
+{% block content %}
+
+   <div class="govuk-grid-row">
+
+     <form action="search-month" method="post" novalidate>
+
+   <div class="govuk-grid-column-full">
+
+     <div class="hmcts-page-heading">
+
+     <div class="hmcts-page-heading__title">
+     <h1 class="govuk-heading-xl">{{person_theirName}}</h1>
+     </div>
+
+     <div class="hmcts-page-heading__actions">
+
+     <div class="hmcts-menu">
+       <div class="hmcts-menu__wrapper">
+
+         <button class="govuk-button hmcts-menu__item hmcts-button--secondary hmcts-page-heading__action" data-module="govuk-button">
+           Edit user
+         </button>
+
+         <button class="govuk-button hmcts-menu__item hmcts-button--secondary hmcts-page-heading__action" data-module="govuk-button">
+           Delete user
+         </button>
+
+       </div>
+     </div>
+
+     </div>
+
+     </div>
+
+     {% include "components/admin/date-input/date-input-02.html" %}
+
+    {% include "components/admin/user-details/user-details-02.html" %}
+
+
+  </div>
+
+  </form>
+
+  </div>
+
+{% endblock %}
