@@ -18,16 +18,6 @@
 
   <nav class="hmcts-header__navigation" aria-label="Account navigation">
 
-    <ul class="hmcts-header__navigation-list">
-
-      <li class="hmcts-header__navigation-item">
-        <a class="hmcts-header__navigation-link" href="management-information/october-2021">
-          <b>View management information</b>
-        </a>
-      </li>
-
-    </ul>
-
   </nav>
 
 </div>
@@ -36,13 +26,32 @@
 
 </header>
 
-{% include "components/admin/primary-nav/primary-nav.html" %}
+{% endblock %}
+
+{% block backButton %}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+<h1 class="govuk-heading-xl" style="margin-bottom: 10px">{{person_theirNino}}</h1>
 
 {% endblock %}
 
 
 {% block content %}
-  <div class="govuk-grid-row">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+
 
 {% block service %}
 
@@ -51,6 +60,7 @@
 
     </div>
 
+  </div>
 {% endblock %}
 
 {% block footer %}

@@ -1,10 +1,10 @@
 {% extends "layouts/warbreck/layout-search-case-details.html" %}
 
-{% set person_firstName = "Mark Jones" %}
-{% set person_theirNino = "AA 11 22 33 B" %}
-{% set details_benefitType = "Attendance Allowance" %}
-{% set details_lastUpdated = "08/10/2021" %}
-{% set details_dateReceived = "07/10/2021" %}
+{% set person_firstName = "Abby Smith" %}
+{% set person_theirNino = "XX 11 22 33 X" %}
+{% set details_benefitType = "Employment and Support Allowance" %}
+{% set details_lastUpdated = "29/09/2021" %}
+{% set details_dateReceived = "24/09/2021" %}
 {% set details_taskResponse = "AWAC updated" %}
 {% set details_updatedBy = "Bobbi Bell" %}
 
@@ -17,10 +17,6 @@
 
     {% include "components/admin/task-details/task-details-list-search.html" %}
 
-    {{ govukButton({
-      text: "Management check done",
-      href: "../management-check/complete"
-    }) }}
 
   </div>
 

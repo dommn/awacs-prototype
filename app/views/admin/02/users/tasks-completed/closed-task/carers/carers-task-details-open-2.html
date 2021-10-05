@@ -1,0 +1,26 @@
+{% extends "layouts/warbreck/layout-search-case-details.html" %}
+
+{% set person_firstName = "Abby Smith" %}
+{% set person_theirNino = "XX 11 22 33 X" %}
+{% set details_benefitType = "Carer's Allowance" %}
+{% set details_lastUpdated = "-" %}
+{% set details_dateReceived = "11/10/2021" %}
+{% set details_taskResponse = "-" %}
+{% set details_updatedBy = "-" %}
+
+{% block content %}
+
+   <div class="govuk-grid-row">
+
+
+   <div class="govuk-grid-column-full">
+
+    {% include "components/admin/task-details/task-details-list-search.html" %}
+
+
+  </div>
+
+
+  </div>
+
+{% endblock %}

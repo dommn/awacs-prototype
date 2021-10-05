@@ -2,10 +2,11 @@
 
 {% set person_firstName = "Mark Jones" %}
 {% set person_theirNino = "AA 11 22 33 B" %}
-{% set details_benefitType = "Employment and Support Allowance" %}
-{% set details_dateReceived = "07/08/2021" %}
-{% set details_lastUpdated = "07/08/2021" %}
-{% set details_taskResponse = "Unable to update" %}
+{% set details_benefitType = "Carer's Allowance" %}
+{% set details_lastUpdated = "-" %}
+{% set details_dateReceived = "11/10/2021" %}
+{% set details_taskResponse = "-" %}
+{% set details_updatedBy = "-" %}
 
 {% block content %}
 
@@ -14,7 +15,7 @@
 
    <div class="govuk-grid-column-full">
 
-    {% include "components/task-details/task-details-list-search.html" %}
+    {% include "components/admin/task-details/task-details-list-search.html" %}
 
 
   </div>

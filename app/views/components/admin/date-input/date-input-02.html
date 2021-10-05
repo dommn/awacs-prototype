@@ -15,7 +15,7 @@
           <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
             Day
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="search-date-day" name="search-date-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
       </div>
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
@@ -44,28 +44,29 @@
           <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
             Day
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="search-to-date-day" name="search-date-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
       </div>
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
           <label class="govuk-label govuk-date-input__label" for="search-date-month">
             Month
           </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="search-date-month" name="search-date-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="search-to-date-month" name="search-date-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
       </div>
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
           <label class="govuk-label govuk-date-input__label" for="search-date-year">
             Year
           </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="search-date-year" name="year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="search-to-date-year" name="year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
       </div>
     </div>
   </div>
 
-  <button class="govuk-button" data-module="govuk-button">
-    Search
-  </button>
+  {{ govukButton({
+  text: "Search",
+  href: "q2"
+  }) }}
 
 </div>
 </details>
