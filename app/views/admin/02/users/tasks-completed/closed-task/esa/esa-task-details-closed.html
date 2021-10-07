@@ -17,6 +17,10 @@
 
     {% include "components/admin/task-details/task-details-list-search.html" %}
 
+    {{ govukButton({
+      text: "Complete management check",
+      href: "../management-check/complete"
+    }) }}
 
   </div>
 
