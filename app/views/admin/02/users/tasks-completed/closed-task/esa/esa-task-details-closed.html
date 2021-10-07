@@ -17,9 +17,30 @@
 
     {% include "components/admin/task-details/task-details-list-search.html" %}
 
+    <h3 class="govuk-heading-m">Management check</h3>
+
+    {{ govukRadios({
+  "name": "pass-or-fail",
+  "fieldset": {
+    "legend": {
+      "text": "What is the outcome of the management check?"
+    }
+  },
+  "items": [
+    {
+      "value": "Pass",
+      "text": "Pass"
+    },
+    {
+      "value": "Fail",
+      "text": "Fail"
+    }
+  ]
+}) }}
+
     {{ govukButton({
       text: "Complete management check",
-      href: "../management-check/complete"
+      href: "complete"
     }) }}
 
   </div>

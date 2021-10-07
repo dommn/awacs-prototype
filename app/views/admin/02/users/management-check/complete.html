@@ -1,0 +1,121 @@
+{% extends "layouts/admin/layout-mgmt-check-complete.html" %}
+
+{% set notification_outstandingTasks = "36" %}
+{% set notification_pausedTasks = "4" %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<form action="search-month" method="post">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+  {% set html %}
+  <h3 class="govuk-notification-banner__heading">
+    Management check complete
+  </h3>
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html,
+  type: 'success'
+}) }}
+
+<h1 class="govuk-heading-l">Management checks</h1>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+  <th scope="col" class="govuk-table__header">Date checked</th>
+  <th scope="col" class="govuk-table__header">Task completed by</th>
+  <th scope="col" class="govuk-table__header">Checked by</th>
+  <th scope="col" class="govuk-table__header">Result</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="task-details">11/10/2021</a></th>
+    <td class="govuk-table__cell">Bobbi Brown</td>
+    <td class="govuk-table__cell">Alex Jones</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">07/10/2021</a></th>
+    <td class="govuk-table__cell">Bobbi Brown</td>
+    <td class="govuk-table__cell">Anne Harris</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">07/10/2021</a></th>
+    <td class="govuk-table__cell">Jakob Cooper</td>
+    <td class="govuk-table__cell">Anne Harris</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">06/10/2021</a></th>
+    <td class="govuk-table__cell">Lili Stephenson</td>
+    <td class="govuk-table__cell">John Smith</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">05/10/2021</a></th>
+    <td class="govuk-table__cell">Shaqib Mahmood</td>
+    <td class="govuk-table__cell">Anne Harris</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">05/10/2021</a></th>
+    <td class="govuk-table__cell">Susanna Hyde</td>
+    <td class="govuk-table__cell">Pierre Cantona</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">04/10/2021</a></th>
+    <td class="govuk-table__cell">Sylvia Bernard</td>
+    <td class="govuk-table__cell">Pierre Cantona</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">10/09/2021</a></th>
+    <td class="govuk-table__cell">Bobbi Brown</td>
+    <td class="govuk-table__cell">Anne Harris</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">09/09/2021</a></th>
+    <td class="govuk-table__cell">Jakob Cooper</td>
+    <td class="govuk-table__cell">John Smith</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">06/09/2021</a></th>
+    <td class="govuk-table__cell">Lili Stephenson</td>
+    <td class="govuk-table__cell">Joan McCarthy</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">06/09/2021</a></th>
+    <td class="govuk-table__cell">Shaqib Mahmood</td>
+    <td class="govuk-table__cell">Joan McCarthy</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header"><a href="#">03/09/2021</a></th>
+    <td class="govuk-table__cell">Susanna Hyde</td>
+    <td class="govuk-table__cell">Pierre Cantona</td>
+    <td class="govuk-table__cell">Pass</td>
+  </tr>
+</tbody>
+</table>
+
+  </div>
+</div>
+
+</form>
+
+{% endblock %}
