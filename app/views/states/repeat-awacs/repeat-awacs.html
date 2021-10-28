@@ -1,0 +1,50 @@
+{% extends "layouts/warbreck/layout-case-details.html" %}
+
+{% set person_firstName = "David Smith" %}
+{% set person_theirNino = "CC 33 22 11 B" %}
+{% set details_benefitType = "Attendance Allowance" %}
+{% set details_dateReceived = "20/08/2021" %}
+
+{% block content %}
+
+ <form action="completed-no" method="post">
+
+   <div class="govuk-grid-row">
+
+<div class="govuk-grid-column-full">
+
+  <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      This could be a repeated task
+    </p>
+    <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there's a problem.</p>
+  </div>
+</div>
+
+    {% include "components/task-details/task-details-list-not-urgent.html" %}
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Close task",
+        href: "response"
+      }) }}
+
+      {{ govukButton({
+        text: "Pause task",
+        classes: "govuk-button--secondary",
+        href: "#"
+      }) }}
+    </div>
+
+  </div>
+
+
+  </div>
+
+{% endblock %}

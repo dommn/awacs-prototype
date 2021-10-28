@@ -1,0 +1,100 @@
+{% extends "layouts/admin/user-details.html" %}
+
+{% set person_theirName = "Bobbi Bell" %}
+{% set person_theirNino = "AA 11 22 33 B" %}
+{% set details_benefitType = "Employment and Support Allowance" %}
+{% set details_dateReceived = "07/08/2021" %}
+{% set details_taskResponse = "Unable to update" %}
+
+{% block content %}
+
+   <div class="govuk-grid-row">
+
+     <form action="search-month" method="post" novalidate>
+
+   <div class="govuk-grid-column-full">
+
+<h1 class="govuk-heading-l">{{person_theirName}}</h1>
+
+
+     {% include "components/admin/date-input/date-input-02.html" %}
+
+
+     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+     <table class="govuk-table">
+       <caption class="govuk-table__caption govuk-table__caption--m">Showing information for 1 October 2021 to 11 October 2021</caption>
+     <thead class="govuk-table__head">
+     <tr class="govuk-table__row">
+       <th scope="col" class="govuk-table__header">Benefit type</th>
+       <th scope="col" class="govuk-table__header govuk-table__header--numeric">Tasks closed in 3 days</th>
+       <th scope="col" class="govuk-table__header govuk-table__header--numeric">Tasks closed after 3 days</th>
+     </tr>
+     </thead>
+     <tbody class="govuk-table__body">
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><a href="attendance-allowance-tasks">Attendance Allowance</a></th>
+       <td class="govuk-table__cell govuk-table__cell--numeric">11</td>
+       <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><a href="#">Bereavement Benefit</a></th>
+       <td class="govuk-table__cell govuk-table__cell--numeric">21</td>
+       <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><a href="#">Bereavement Support Payments</a></th>
+       <td class="govuk-table__cell govuk-table__cell--numeric">34</td>
+       <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><a href="#">Disability Living Allowance</a></th>
+       <td class="govuk-table__cell govuk-table__cell--numeric">19</td>
+       <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><a href="#">Employment and Support Allowance</a></th>
+       <td class="govuk-table__cell govuk-table__cell--numeric">64</td>
+       <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><a href="#">Income Support</a></th>
+       <td class="govuk-table__cell govuk-table__cell--numeric">27</td>
+       <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><a href="#">Jobseeker's Allowance</a></th>
+       <td class="govuk-table__cell govuk-table__cell--numeric">65</td>
+       <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><a href="#">Maternity Allowance</a></th>
+       <td class="govuk-table__cell govuk-table__cell--numeric">9</td>
+       <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><a href="#">State Pension</a></th>
+       <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+       <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><a href="#">Support for Mortgage Interest</a></th>
+       <td class="govuk-table__cell govuk-table__cell--numeric">12</td>
+       <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+     </tr>
+     <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header">Total</th>
+       <td class="govuk-table__cell govuk-table__cell--numeric"><b>266</b></td>
+       <td class="govuk-table__cell govuk-table__cell--numeric"><b>2</b></td>
+     </tr>
+     </tbody>
+     </table>
+
+
+
+  </div>
+  </form>
+
+  </div>
+
+{% endblock %}
