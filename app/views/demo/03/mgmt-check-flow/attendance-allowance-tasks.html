@@ -1,0 +1,51 @@
+{% extends "demo/03/layouts/admin/user-tasks-aa.html" %}
+
+{% set person_theirName = "Bobbi Bell" %}
+{% set person_theirNino = "AA 11 22 33 B" %}
+{% set details_benefitType = "Attendance Allowance" %}
+{% set details_dateReceived = "07/08/2021" %}
+{% set details_taskResponse = "Unable to update" %}
+{% set details_updatedBy = "Bobbi Bell" %}
+
+{% block content %}
+
+   <div class="govuk-grid-row">
+
+     <form action="search-month" method="post" novalidate>
+
+   <div class="govuk-grid-column-full">
+
+     <span class="govuk-caption-xl">1 November 2021 to 5 November 2021</span>
+     <h1 class="govuk-heading-xl">{{details_benefitType}} tasks</h1>
+
+
+     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+     {% include "demo/03/components/admin/task-search/search-results-user-october.html" %}
+
+     <nav class="moj-pagination" id="pagination-label">
+
+     <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+     <ul class="moj-pagination__list">
+     <li class="moj-pagination__item  moj-pagination__item--prev">
+       <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+     </li>
+
+     <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+     <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">2</a></li>
+
+     <li class="moj-pagination__item  moj-pagination__item--next">
+       <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+     </li>
+     </ul>
+     <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>11</b> tasks</p>
+     </nav>
+
+  </div>
+  </form>
+
+  </div>
+
+{% endblock %}

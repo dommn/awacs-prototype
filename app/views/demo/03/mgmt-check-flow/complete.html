@@ -1,0 +1,74 @@
+{% extends "demo/03/layouts/admin/layout-check-done.html" %}
+
+{% set notification_outstandingTasks = "36" %}
+{% set notification_pausedTasks = "4" %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<form action="search-month" method="post">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+  {% set html %}
+  <h3 class="govuk-notification-banner__heading">
+    Management check complete
+  </h3>
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html,
+  type: 'success'
+}) }}
+
+<h1 class="govuk-heading-l">User data</h1>
+
+
+<h2 class="govuk-heading-m">Showing information for 1 November 2021 to 5 November 2021</h2>
+
+    <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half">Name</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Total tasks closed</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Bobbi Bell</a></th>
+      <td class="govuk-table__cell">266</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="users/jakob-cooper">Jakob Cooper</a></th>
+      <td class="govuk-table__cell">238</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Lili Stephenson</a></th>
+      <td class="govuk-table__cell">261</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Shaqib Mahmood</a></th>
+      <td class="govuk-table__cell">259</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Susanna Hyde</a></th>
+      <td class="govuk-table__cell">257</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">Sylvia Bernard</a></th>
+      <td class="govuk-table__cell">171</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+</div>
+
+</form>
+
+{% endblock %}

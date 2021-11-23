@@ -1,0 +1,23 @@
+{% extends "demo/03/layouts/warbreck/layout-search.html" %}
+
+{% set search_benefitType = "Attendance Allowance" %}
+{% set search_responseType = "AWAC updated" %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+    {% include "demo/03/components/search-results/search-results.html" %}
+
+  </div>
+</div>
+
+
+{% endblock %}

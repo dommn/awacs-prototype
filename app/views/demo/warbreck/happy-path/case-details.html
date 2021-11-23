@@ -1,0 +1,31 @@
+{% extends "demo/03/layouts/warbreck/layout-case-details.html" %}
+
+
+{% set person_firstName = "Alan Buxton" %}
+{% set person_theirNino = "XX 12 33 44 A" %}
+{% set details_benefitType = "Attendance Allowance" %}
+{% set details_dateReceived = "05/11/2021" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-full">
+
+ {% include "components/task-details/task-details-list.html" %}
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Close task",
+        href: "response"
+      }) }}
+
+      {{ govukButton({
+        text: "Pause task",
+        classes: "govuk-button--secondary"
+      }) }}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "https://www.gov.uk/",
+    serviceName: "Advice of wrong account for credit",
+    serviceUrl: "index",
+    navigation: [
+    {
+      href: "",
+      text: ""
+    }
+    ]
+  }) }}
+  <div class="homepage-top">
+  <div class="homepage-top-content">
+    <h1 class="govuk-heading-xl">
+      {{serviceName}}
+      <span>Demo journeys</span>
+    </h1>
+  </div>
+</div>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Warbreck</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Journey</th>
+      <th scope="col" class="govuk-table__header">Link</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Close task</th>
+      <td class="govuk-table__cell"><a href="demo/warbreck/happy-path/home">View journey</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Pause task</th>
+      <td class="govuk-table__cell"><a href="demo/warbreck/pause-task/home">View journey</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Search for a NINO</th>
+      <td class="govuk-table__cell"><a href="demo/warbreck/search-nino/home">View journey</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="govuk-table">
+<caption class="govuk-table__caption govuk-table__caption--m">Management information</caption>
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+  <th scope="col" class="govuk-table__header">Journey</th>
+  <th scope="col" class="govuk-table__header">Link</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Search date range - previous quarter</th>
+  <td class="govuk-table__cell"><a href="demo/03/date-search/october-2021">View journey</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Management check (pass)</th>
+  <td class="govuk-table__cell"><a href="demo/03/mgmt-check-flow/manage-team">View journey</td>
+</tr>
+</tbody>
+</table>
+
+  </div>
+</div>
+
+{% endblock %}
