@@ -1,0 +1,52 @@
+{% extends "admin/03/layouts/admin/layout-case-details-breadcrumbs.html" %}
+
+{% set person_firstName = "Abby Smith" %}
+{% set person_theirNino = "XX 11 22 33 X" %}
+{% set details_benefitType = "Employment and Support Allowance" %}
+{% set details_lastUpdated = "29/09/2021" %}
+{% set details_dateReceived = "24/09/2021" %}
+{% set details_taskResponse = "AWAC updated" %}
+{% set details_updatedBy = "Bobbi Bell" %}
+{% set details_kpiMissed = "Validation error - query raised with Experian" %}
+
+{% block content %}
+
+   <div class="govuk-grid-row">
+
+
+   <div class="govuk-grid-column-full">
+
+    {% include "admin/03/components/admin/task-details/task-details-kpi-missed.html" %}
+
+    <h3 class="govuk-heading-m">Management check</h3>
+
+    {{ govukRadios({
+  "name": "pass-or-fail",
+  "fieldset": {
+    "legend": {
+      "text": "What is the outcome of the management check?"
+    }
+  },
+  "items": [
+    {
+      "value": "Pass",
+      "text": "Pass"
+    },
+    {
+      "value": "Fail",
+      "text": "Fail"
+    }
+  ]
+}) }}
+
+    {{ govukButton({
+      text: "Complete management check",
+      href: "complete"
+    }) }}
+
+  </div>
+
+
+  </div>
+
+{% endblock %}
